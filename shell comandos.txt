@@ -1,0 +1,23 @@
+#Comandos para executar no shell(Criar banco e tabela)
+--logar no banco
+mysql -u root -p
+--exibir banco de dados
+show databases;
+--criar banco de dados login
+create database login;
+--selecionar banco de dados
+use login;
+--criar tabela formulario
+create table formulario(
+id int auto_increment primary key not null,
+nome varchar(80) not null,
+email varchar(80) not null unique,
+senha varchar(32) not null);
+--exibir tabelas no banco login
+show tables;
+--mostrar colunas da tabela formulario
+desc formulario;
+--inserir dados na tabela formuarlio
+insert into formulario (nome,email,senha)values('leo','leonel.diniz@live.com','123');
+--exibir dados da tabela formulario
+select * from formulario;
